@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_topit_article_show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background"
+    tools:context=".TopitAriticle.TopitArticleShow">
+
+    <LinearLayout
+        android:id="@+id/ll_pb"
+        android:background="@color/list_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/pb_update_article_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="50dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_tas_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--文章列表-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_background">
+
+            <com.example.qq985.topit.RefreshableView
+                android:id="@+id/rv_update_article_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/lv_tas_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true">
+
+                </ListView>
+            </com.example.qq985.topit.RefreshableView>
+
+
+        </LinearLayout>
+
+
+        <!--底部烂-->
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_last_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pressed"
+            android:text="上一页"
+            android:textColor="@color/word" />
+
+        <TextView
+            android:id="@+id/tv_show_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="@color/list_background"
+            android:gravity="center"
+            android:text="11"
+            android:textColor="@color/word" />
+
+        <Button
+            android:id="@+id/btn_goto_the_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@drawable/btn_pressed"
+            android:text="跳转"
+            android:textColor="@color/word" />
+
+        <EditText
+            android:id="@+id/et_goto_the_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="@color/list_background"
+            android:gravity="center"
+            android:textColor="@color/word" />
+
+
+        <Button
+            android:id="@+id/btn_next_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pressed"
+            android:text="下一页"
+            android:textColor="@color/word" />
+
+    </LinearLayout>
+
+</FrameLayout>
